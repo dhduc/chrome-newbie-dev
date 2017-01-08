@@ -1,0 +1,28 @@
+{
+  "name": "Chrome Newbie Dev",
+  "version": "1.0",
+  "author": "Duc Dao",
+  "homepage_url": "https://github.com/dhduc/chrome-newbie-dev",
+  "manifest_version": 2,
+  "description": "Chrome Extension",
+  "content_scripts": [
+    {
+      "matches": [ "http://*/*", "https://*/*"],
+      "js": ["jquery-1.11.1.min.js", "content.js", "assets/js/moment.min.js", "assets/js/script.js"]
+    }
+  ],
+  "options_page": "options.html",
+  "icons": {
+    "16" : "images/icon-16.png",
+    "48" : "images/icon-48.png",
+    "128" : "images/icon-128.png"
+  },
+  "browser_action": {
+    "default_icon": "images/icon-24.png",
+    "default_title": "Title"
+  },
+  "permissions": ["tabs"],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
